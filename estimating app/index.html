@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wood Framing Estimating Tool</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <div class="about">
+    <p>This tool is designed for esimators by estimators.  It was created to provide a tool to create quality material takeoffs for wood framed buildings.
+    </p>
+
+  <div id="specs">
+
+    <div>
+      <form action="#">
+      <fieldset>
+        <legend>Project Info</legend>
+          <p>Contractor:
+            <input type="text" name="contractor" size="15" maxlength="30" />
+          </p>
+          <p>Name/Address:
+            <input type="text" name="project" size="15" maxlength="45" />
+          </p>
+      </fieldset>
+
+    <fieldset>
+      <legend>Specs</legend>
+
+      <p>What is the building type</p>
+      <select name="buildingType">
+          <option value="single family">Single Family</option>
+          <option value="multi family">Multi Family</option>
+          <option value="commercial">Commercial</option>
+      </select>
+
+      <p>How many levels in the building?</p>
+        <select name="buildingLevels">
+          <option value="Basement-1 story">Single Story with Basement</option>
+          <option value="Basement-2 story">Two Story with Basement</option>
+          <option value="1 story on slab">Single Story on Slab</option>
+          <option value="2 story on slab">Two Story on Slab</option>
+        <select>
+
+        <p>Percent extra to include for:</p>
+          <p>Studs:
+            <input type="number" name="contractor" size="2" maxlength="2" />
+          </p>
+          <p>Lineal (top & bottom plates/blocking/bracing):
+            <input type="number" name="lineal" size="2" maxlength="2" />
+          </p>
+          <p>Sheathing (Walls, floor, & roof)
+            <input type="number" name="sheathing" size="2" maxlength="2" />
+          </p>
+
+          <p>Wall Types in Include in the Takeoff:</p>
+          <input type="checkbox" name="wallTypes" value="2x4Exterior">2x4 exterior</input>
+          <input type="checkbox" name="wallTypes" value="2x6Exterior">2x6 exterior</input>
+          <input type="checkbox" name="wallTypes" value="2x8Exterior">2x8 exterior</input>
+          <input type="checkbox" name="wallTypes" value="2x4Interior">2x4 interior</input>
+          <input type="checkbox" name="wallTypes" value="2x6Interior">2x6 interior</input>
+          <input type="checkbox" name="wallTypes" value="2x4Party">2x4 party (includes 1 layer 5/8" gyp)</input>
+          <input type="checkbox" name="wallTypes" value="2x6Party">2x6 party (includes 1 layer 5/8" gyp)</input>
+          <input type="checkbox" name="wallTypes" value="2x4TallExt">2x4 tall exterior (14' wall height and taller)</input>
+          <input type="checkbox" name="wallTypes" value="2x6TallExt">2x6 tall exterior (14' wall height and taller)</input>
+          <input type="checkbox" name="wallTypes" value="2x8TallExt">2x8 tall exterior (14' wall height and taller)</input>
+          <input type="checkbox" name="wallTypes" value="2x4GarageExt">2x4 garage exterior</input>
+          <input type="checkbox" name="wallTypes" value="2x6GarageExt">2x6 garage exterior</input>
+          <input type="checkbox" name="wallTypes" value="2x4GarageInt">2x4 garage interior</input>
+          <input type="checkbox" name="wallTypes" value="2x6GarageInt">2x6 garage interior</input>
+          <input type="checkbox" name="wallTypes" value="2x4GarageHouse">2x4 garage/house</input>
+          <input type="checkbox" name="wallTypes" value="2x6GarageHouse">2x6 garage/house</input>
+
+          <p>Exterior wall sheathing</p>
+            <select name="wallSheathing">
+              <option value="4x8OSB716">4x8-7/16 OSB</option>
+              <option value="OSB716Match">7/16 OSB Match Wall Height</option>
+              <option value="4x8OSB1532">4x8-15/32 OSB</option>
+              <option value="OSB1532Match">15/32 OSB Match Wall Height</option>
+              <option value="4x8CDX12">4x8-1/2 CDX</option>
+              <option value="4x8Dens58">4x8-5/8 Dens Glass Gold</option>
+              <option value="4x8Zip716">4x8-7/16 Zip</option>
+              <option value="Zip716Match">7/16 Zip Match Wall Height</option>
+              <option value="4x8Zip12">4x8-1/2 Zip</option>
+              <option value="4x8ZipR3">4x8-1" Zip with 1/2" OSB & 1/2" Insulation</option>
+              <option value="4x8ZipR6">4x8-1.5" Zip with 1/2" OSB & 1" Insulation</option>
+            </select>
+
+          <p>Roof Sheathing</p>
+            <select name="roofSheathing">
+              <option value="4x8OSB716Roof">4x8-7/16 OSB</option>
+              <option value="4x8OSB1532Roof">4x8-15/32 OSB</option>
+              <option value="4x8OSB12Roof">4x8-1/2 OSB</option>
+              <option value="4x8OSB58Roof">4x8-5/8 OSB</option>
+              <option value="4x8CDX12Roof">4x8-1/2 CDX</option>
+              <option value="4x8CDX58Roof">4x8-5/8 CDX</option>
+            </select>
+      </fieldset>
+  </form>
+    </div>
+  </div>
+
+  <div id="takeoff">
+    <h3>Takeoff</h3>
+
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
